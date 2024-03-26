@@ -11,6 +11,8 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'MonInter';
+    color: var(--couleur-principale);
 }
 
 @font-face {
@@ -32,14 +34,126 @@ body{
 
 h1, h2{
     text-transform: uppercase;
+    font-family: '';
+}
+h1, h2, h3, h4{
+  font-family: 'MonRobotoCondensed';
+}
+h1{
+  font-size: 80px;
 }
 
-hi
-@media only screen and (max-width: 700px) {
+header{
+  height: 200px;
+  background-color: var(--couleur-principale);
+  padding-left: 40px;
+  padding-top: 40px;
+  color: white;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+aside{
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--couleur-secondaire);
+  border-top-left-radius: 60px;
+  position: relative;
+  top: -80px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+header h2{
+  margin-top: 30px;
+
+  border-top: 1px solid var(--couleur-secondaire);
+}
+
+main section{
+  margin: 80px;
+}
+
+.aside{
+  background-color: var(--couleur-secondaire);
+}
+.profil{
+  position: relative;
+  top: -60px;
+}
+
+aside div{
+  margin: 30px;
+}
+
+
+section > div:first-child{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  background-color: var(--couleur-secondaire);
+  width: 300px;
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+section > div:first-child img{
+  margin-right: 30px;
+  size: 10px;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  header{
+    height: 150px;
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  aside{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 50px;
+  }
+
+  main section{
+    margin-top: 30px;
+    margin-right: 45px;
+    margin-left: 0px;
+  }
+
+  section > div:first-child{
+    height: 40px;
+    width: 300px;
+    padding: 15px;
+    border-top-left-radius: 0px;
+
+    border-bottom-left-radius: 0px;
+  }
+  section > div:last-child{
+    margin-left: 40px;
+  }
+  section p {
+    margin-left: 30px;
+  }
     
 }
 
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 801px) {
     /* Styles CSS spécifiques pour les écrans de petite taille */
     
   }
