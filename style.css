@@ -80,7 +80,7 @@ header h2{
 }
 
 main section{
-  margin: 80px;
+  margin: 30px;
 }
 
 .aside{
@@ -94,7 +94,11 @@ main section{
 aside div{
   margin: 30px;
 }
-
+ 
+section img{
+  display: inline-block;
+  width: 50px;
+}
 
 section > div:first-child{
   display: flex;
@@ -106,10 +110,55 @@ section > div:first-child{
   padding: 20px;
   border-radius: 40px;
   margin-bottom: 20px;
+  
+  box-shadow: 1px 1px 1px var(--couleur-principale);
 }
 section > div:first-child img{
   margin-right: 30px;
   size: 10px;
+}
+
+.contact{
+  margin-top: 0;
+}
+.profil{
+  margin-bottom: 0;
+}
+
+.contact div{
+  text-align: start;
+  width: 210px;
+}
+
+.blocAligne{
+  display: flex;
+  justify-content: stretch;
+}
+
+.blocAligne span{
+  border: 2px solid var(--couleur-principale);
+  z-index: 1;
+}
+.blocAligne div{
+  z-index: 2;
+}
+
+.blocAligne div h3::before{
+  content: ' ...';
+  margin-right: 2px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background-color: var(--couleur-principale);
+  border-radius: 50%;
+}
+.blocAligne div h3{
+  display: flex;
+  gap: 100px;
+  width: 100px;
+  position: relative;
+  left: -67px;
 }
 
 
@@ -117,6 +166,19 @@ section > div:first-child img{
 
 
 @media only screen and (max-width: 800px) {
+
+
+  main{
+    flex-direction: column;
+  }
+
+  aside{
+    width: 100%;
+    border-top-left-radius: 0px;
+    position: static;
+    flex-direction: column;
+  
+  }
   header{
     height: 150px;
     padding-left: 30px;
@@ -126,6 +188,8 @@ section > div:first-child img{
   h1{
     font-size: 40px;
   }
+
+  
 
   aside{
     padding-left: 10px;
@@ -144,7 +208,6 @@ section > div:first-child img{
     width: 300px;
     padding: 15px;
     border-top-left-radius: 0px;
-
     border-bottom-left-radius: 0px;
   }
   section > div:last-child{
